@@ -20,5 +20,11 @@ module.exports = {
   "plugins": [
       "@typescript-eslint"
   ],
-  "rules": {}
+  "rules": {
+    "import/extensions": [2, {
+      "js": "never",
+      "ts": "never",
+      "json": "never"
+    }],
+  }
 };
