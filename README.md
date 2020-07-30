@@ -20,6 +20,12 @@ $ yarn dev
 $ yarn dev:watch
 ```
 
+### test
+
+```bash
+$ yarn test
+```
+
 ### build
 
 ```bash

@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    'jest/globals': true,
   },
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
@@ -21,6 +22,7 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'jest'
   ],
   rules: {
     'import/extensions': [2, {
