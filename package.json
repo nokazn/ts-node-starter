@@ -15,7 +15,9 @@
   },
   "author": "nokazn",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.7",
     "@types/node": "^14.0.27",

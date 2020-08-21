@@ -1,6 +1,12 @@
 # typescript-starter
 
-## Scripts
+## setting environmental variables
+
+```bash
+$ echo PORT=3000 > .env
+```
+
+## scripts
 
 ### format
 
@@ -46,9 +52,9 @@ $ curl localhost:8000
 Hello World!
 ```
 
-## ESLint
+## eslint
 
-ESLint 関連の各種プラグインなどをインストールする。
+eslint 関連の各種プラグインなどをインストールする。
 
 ```bash
 $ yarn add -D @typescript-eslint/eslint-plugin \
@@ -58,16 +64,16 @@ $ yarn add -D @typescript-eslint/eslint-plugin \
   eslint-plugin-import
 ```
 
-## Prettier
+## prettier
 
-Prettier 関連の各種プラグインなどをインストールする。
+prettier 関連の各種プラグインなどをインストールする。
 
 ```bash
 $ yarn add -D prettier \
   eslint-config-prettier
 ```
 
-ESLint との競合を防ぐため、`.eslintrc.js`を修正する。
+eslint との競合を防ぐため、`.eslintrc.js`を修正する。
 
 ```diff:.eslintrc.js
  extends: [
