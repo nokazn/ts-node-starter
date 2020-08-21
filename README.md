@@ -2,6 +2,12 @@
 
 ## Scripts
 
+### format
+
+```bash
+$ yarn format
+```
+
 ### lint
 
 ```bash
@@ -50,6 +56,35 @@ $ yarn add -D @typescript-eslint/eslint-plugin \
   eslint \
   eslint-config-airbnb-base \
   eslint-plugin-import
+```
+
+## Prettier
+
+Prettier 関連の各種プラグインなどをインストールする。
+
+```bash
+$ yarn add -D prettier \
+  eslint-config-prettier
+```
+
+ESLint との競合を防ぐため、`.eslintrc.js`を修正する。
+
+```diff:.eslintrc.js
+ extends: [
++ "prettier",
++ "prettier/@typescript-eslint",
+ ]
+```
+
+`.prettierrc.json` に適宜設定する。
+
+```json:.prettierrc.json
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "all"
+}
 ```
 
 ## License
