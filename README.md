@@ -75,7 +75,8 @@ $ yarn add -D prettier \
 
 eslint との競合を防ぐため、`.eslintrc.js`を修正する。
 
-```diff:.eslintrc.js
+```diff
+// .eslintrc.js
  extends: [
 + "prettier",
 + "prettier/@typescript-eslint",
@@ -115,7 +116,8 @@ module.exports = {
 
 ESLint rules for Jest
 
-```diff:.eslintrc.js
+```diff
+// .eslintrc.js
  env: {
    es6: true,
    node: true,
