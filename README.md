@@ -93,6 +93,41 @@ eslint との競合を防ぐため、`.eslintrc.js`を修正する。
 }
 ```
 
+## jest
+
+```bash
+$ yarn add -D jest ts-jest eslint-plugin-jest @types/jest
+```
+
+```js:jest.config.js
+module.exports = {
+  roots: ['.'],
+  transform: {
+    '^.+\\.ts$': 'ts-jest',
+  },
+  globals: {
+    'ts-jest': {
+      tsConfig: './tsconfig.json',
+    },
+  },
+};
+```
+
+ESLint rules for Jest
+
+```diff:.eslintrc.js
+ env: {
+   es6: true,
+   node: true,
++  'jest/globals': true,
+ },
+
+ // ...
+
+- plugins: ['@typescript-eslint'],
++ plugins: ['@typescript-eslint','jest'],
+```
+
 ## License
 
 MIT
