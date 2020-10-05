@@ -10,20 +10,27 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'airbnb-base',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
     'prettier',
     'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     sourceType: 'module',
+    project: ['./tsconfig.json'],
   },
   plugins: ['@typescript-eslint', 'jest'],
   rules: {
+    // switch 文での prettier との競合を防ぐ
+    indent: [2, 2, { SwitchCase: 1 }],
+    'lines-between-class-members': 0,
+    'no-console': 0,
+
+    /**
+     * eslint-plugin-import
+     */
     'import/extensions': [
       2,
       {
@@ -34,12 +41,16 @@ module.exports = {
         json: 'never',
       },
     ],
-    'import/no-unresolved': [2, { commonjs: true, amd: true }],
+    'import/no-unresolved': [1, { commonjs: true, amd: true }],
+    'import/no-extraneous-dependencies': [1, { devDependencies: true }],
     'import/prefer-default-export': 0,
-    // switch 文での prettier との競合を防ぐ
-    indent: [2, 2, { SwitchCase: 1 }],
-    'lines-between-class-members': 0,
-    'no-console': 0,
+
+    /**
+     * eslint と @typescript-eslint 競合を防ぐ
+     */
+    // typescript-eslint の no-use-before-define を有効にする
+    'no-use-before-define': 0,
+    '@typescript-eslint/no-use-before-define': 2,
     // typescript-eslint の no-unuserd-vars を有効にする
     'no-unused-vars': 0,
     '@typescript-eslint/no-unused-vars': 2,
