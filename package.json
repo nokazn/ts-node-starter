@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "eslint --ignore-path .eslintignore src/**/*.ts",
+    "lint": "eslint --ignore-path .eslintignore src/**/*.ts{,x}",
     "lint:fix": "eslint --ignore-path .eslintignore src/**/*.ts{,x} --fix",
     "test": "jest",
     "dev": "ts-node src/index.ts",
