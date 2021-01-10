@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "eslint --ignore-path .eslintignore src/**/*.ts{,x}",
-    "lint:fix": "eslint --ignore-path .eslintignore src/**/*.ts{,x} --fix",
+    "format": "prettier --ignore-path ./.prettierignore --write ./**/*.{t,j}s{,x}",
+    "lint": "eslint --ignore-path .eslintignore ./**/*.{t,j}s{,x}",
+    "lint:fix": "eslint --ignore-path .eslintignore ./**/*.{t,j}s{,x} --fix",
     "test": "jest",
     "dev": "ts-node src/index.ts",
     "dev:watch": "ts-node-dev --respawn src/index.ts",
