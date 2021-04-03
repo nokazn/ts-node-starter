@@ -55,11 +55,6 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ERROR,
     'no-unused-vars': ALLOW,
     '@typescript-eslint/no-unused-vars': ERROR,
-
-    'no-use-before-define': ALLOW,
-    '@typescript-eslint/no-use-before-define': ERROR,
-    'no-unused-vars': ALLOW,
-    '@typescript-eslint/no-unused-vars': ERROR,
     semi: ALLOW,
     '@typescript-eslint/semi': [ERROR],
     '@typescript-eslint/member-delimiter-style': ERROR,
