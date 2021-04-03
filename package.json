@@ -2,6 +2,11 @@
   "name": "typescript-starter",
   "version": "1.0.0",
   "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "nokazn",
+    "url": "https://github.com/nokazn"
+  },
   "main": "index.js",
   "scripts": {
     "format": "prettier --ignore-path ./.prettierignore --write ./**/*.{t,j}s{,x}",
@@ -13,19 +18,17 @@
     "build": "rimraf dist/ && tsc -p ./tsconfig.json",
     "start": "npm run build && node ./dist/index.js"
   },
-  "author": "nokazn",
-  "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
     "@types/node": "^14.0.27",
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "@typescript-eslint/parser": "^2.16.0",
-    "eslint": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^24.0.2",
     "jest": "^26.2.1",
