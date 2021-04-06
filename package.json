@@ -7,12 +7,14 @@
     "name": "nokazn",
     "url": "https://github.com/nokazn"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "format": "prettier --ignore-path ./.prettierignore --write ./**/*.{t,j}s{,x}",
     "lint": "eslint --ignore-path .eslintignore ./**/*.{t,j}s{,x}",
     "lint:fix": "eslint --ignore-path .eslintignore ./**/*.{t,j}s{,x} --fix",
+    "tsc": "tsc --noEmit",
     "test": "jest",
+    "test:ci": "jest --ci",
     "dev": "ts-node src/index.ts",
     "dev:watch": "ts-node-dev --respawn src/index.ts",
     "build": "rimraf dist/ && tsc -p ./tsconfig.json",
