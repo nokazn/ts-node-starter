@@ -21,7 +21,7 @@
     "start": "npm run build && node ./dist/index.js"
   },
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
