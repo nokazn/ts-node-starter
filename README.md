@@ -3,60 +3,62 @@
 ## setting environmental variables
 
 ```bash
+# add `PORT` as an environment variable
 $ echo PORT=3000 > .env
 ```
 
-## scripts
+## npm scripts
 
-### format
-
-```bash
-$ yarn format
-```
-
-### lint
+### Static check
 
 ```bash
-$ yarn lint
+# Run formatter, linter & type checking
+$ yarn static-check
 
-# auto fix
-$ yarn lint:fix
-```
+# Prettier
+$ yarn check:format
+# Prettier (with auto fix)
+$ yarn fix:format
 
-### dev
+# ESLint
+$ yarn check:lint
+# ESLint (with auto fix)
+$ yarn fix:lint
 
-```bash
-$ yarn dev
+# tsc
+$ yarn check:type
 
-# hot reload
-$ yarn dev:watch
-```
-
-### test
-
-```bash
+# Jest
 $ yarn test
 ```
 
-### build
+### Development
 
 ```bash
+# Run development server
+$ yarn dev
+# Run development server (with hot reload)
+$ yarn dev:watch
+
+# Build files under `./src` dir
 $ yarn build
 ```
 
-### start
+### Start
 
 ```bash
-$ yarn start
+# Run Node.js server in the background
+$ yarn start &
 $ curl localhost:8000
 Hello World!
 ```
 
-## eslint
+## ESLint
 
 eslint 関連の各種プラグインなどをインストールする。
 
 ```bash
+# Install dependencies related to ESLint
 $ yarn add -D @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
   eslint \
@@ -64,11 +66,12 @@ $ yarn add -D @typescript-eslint/eslint-plugin \
   eslint-plugin-import
 ```
 
-## prettier
+## Prettier
 
 prettier 関連の各種プラグインなどをインストールする。
 
 ```bash
+# Install dependencies related to Prettier
 $ yarn add -D prettier \
   eslint-config-prettier
 ```
@@ -94,9 +97,10 @@ eslint との競合を防ぐため、`.eslintrc.js`を修正する。
 }
 ```
 
-## jest
+## Jest
 
 ```bash
+# Install dependencies related to Jest
 $ yarn add -D jest ts-jest eslint-plugin-jest @types/jest
 ```
 
