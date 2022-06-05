@@ -31,26 +31,11 @@ module.exports = {
     'lines-between-class-members': ALLOW,
     'no-console': [WARN, { allow: ['info', 'warn', 'error'] }],
 
-    /**
-     * eslint-plugin-import
-     */
-    'import/extensions': [
-      ERROR,
-      {
-        ts: 'never',
-        tsx: 'never',
-        js: 'never',
-        jsx: 'never',
-        json: 'never',
-      },
-    ],
     'import/no-unresolved': [ALLOW],
     'import/no-extraneous-dependencies': [WARN, { devDependencies: true }],
     'import/prefer-default-export': ALLOW,
 
-    /**
-     * eslint と @typescript-eslint 競合を防ぐ
-     */
+    // eslint と @typescript-eslint 競合を防ぐ
     'no-use-before-define': ALLOW,
     '@typescript-eslint/no-use-before-define': ERROR,
     'no-unused-vars': ALLOW,
@@ -58,6 +43,5 @@ module.exports = {
     semi: ALLOW,
     '@typescript-eslint/semi': [ERROR],
     '@typescript-eslint/member-delimiter-style': ERROR,
-    '@typescript-eslint/no-unsafe-return': ALLOW,
   },
 };
