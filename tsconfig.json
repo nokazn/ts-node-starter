@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // "incremental": true,
-    "target": "es2019",
+    "target": "es2020",
     "module": "commonjs",
     // "lib": [],
     "allowJs": true,
@@ -63,8 +63,10 @@
   "include": [
     "./src/**/*.ts",
     "./tests/**/*.ts",
-    "babel.config.js",
-    "jest.config.js",
+    "jest.config.ts",
     ".eslintrc.js",
   ],
+  "exclude": [
+    "node_modules"
+  ]
 }

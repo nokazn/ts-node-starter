@@ -1,6 +1,7 @@
-const path = require('path');
+import path from 'path';
+import type { Config } from '@jest/types';
 
-module.exports = {
+const config: Config.InitialOptions = {
   roots: ['.'],
   transform: {
     '^.+\\.ts$': 'ts-jest',
@@ -14,3 +15,5 @@ module.exports = {
     '^~/(.*)$': path.resolve(__dirname, 'src/$1'),
   },
 };
+
+export default config;
