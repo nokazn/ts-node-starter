@@ -23,7 +23,7 @@
     "start": "node ./dist/index.js"
   },
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^16.0.2"
   },
   "devDependencies": {
     "@swc/core": "^1.2.196",
